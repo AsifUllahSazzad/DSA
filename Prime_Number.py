@@ -1,10 +1,9 @@
-n = int(input())
-stop = True
-for i in range(2,n):
-    if n%i==0:
-        stop = False
-        break
-if stop==True:
-    print(n," is a prime number.")
-else:
-    print(n," is a composite number.")
+start,end = map(int,input("Enter start and end numbers: ").split())
+
+if start>1:
+    for i in range(start,end+1):
+        for j in range(start,i):
+            if i%j==0:
+                break
+        else:
+            print(i,end=" ")
